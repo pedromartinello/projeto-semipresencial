@@ -10,6 +10,13 @@ class Pokemon extends Model
         'name',
         'type',
         'power',
-        'image'        
+        'image',
+        'coach_id'        
     ];
+
+    public function coach()
+    {
+        return $this->belongsTo(Coach::class);
+    }
+
 }

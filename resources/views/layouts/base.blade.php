@@ -29,6 +29,9 @@
             <a href="{{ url('pokemon') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                 Pokemon
             </a>
+            <a href="{{ url('coaches') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                Coach
+            </a>
             </div>
             
         </div>
