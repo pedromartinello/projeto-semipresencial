@@ -1,12 +1,20 @@
 @extends('layouts.base')
 
 @section('content')
+
+<div class="flex items-start ...">
+    <div class="py-8 mb-5 p-4">
+        <a href="{{ url('pokemon/create') }}" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add Pokemon</a>
+    </div>
+</div>
+
+
 <div class="flex flex-wrap justify-center mt-10">
 
     @foreach($pokemon as $entity)
         <div class="p-4 max-w-sm">
             <div class="flex rounded-lg h-full dark:bg-gray-800 bg-teal-400 p-8 flex-col">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="{{ asset($entity->image) }}" alt="{{ $entity->name }}"/>
                 <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ $entity->name }}</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400">{{ $entity->type }}</span>
                 <span class="text-sm text-gray-500 dark:text-gray-400">{{ $entity->power }}</span>

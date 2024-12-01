@@ -9,6 +9,7 @@ class Pokemon extends Model
     protected $fillable = [
         'name',
         'type',
-        'power'
+        'power',
+        'image'        
     ];
 }
